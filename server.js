@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "https://vigorous-snyder-a28d08.netlify.app/"
 };
 
 app.use(cors(corsOptions));
@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // database
 const db = require("./app/models");
 const Role = db.role;
+const Lieu = db.lieu;
 
 // db.sequelize.sync();
 // force: true will drop the table if it already exists
@@ -60,4 +61,10 @@ function initial() {
     name: "admin"
   });
 
+  Lieu.create({
+    id: 1,
+    name: "admin",
+    lat: 45,
+    long: 4
+  });
 }
