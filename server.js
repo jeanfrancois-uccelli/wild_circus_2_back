@@ -8,7 +8,7 @@ var corsOptions = {
   origin: "https://vigorous-snyder-a28d08.netlify.app"
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -40,7 +40,7 @@ require("./app/routes/resa.routes")(app);
 require("./app/routes/lieu.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT ;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
