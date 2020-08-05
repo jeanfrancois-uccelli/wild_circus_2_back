@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081",
+  origin: "https://wildcircus2back.herokuapp.com/",
 };
 
 app.use(cors(corsOptions));
