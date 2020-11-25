@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "https://www.wildcircus2.netlify.app",
+  origin: "http://localhost:8081",
 };
 
 app.use(cors());
