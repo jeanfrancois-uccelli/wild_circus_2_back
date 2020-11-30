@@ -8,7 +8,12 @@ const app = express();
 //   origin: "https://wildcircus2.netlify.app/",
 // };
 
-app.use(cors());
+app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
