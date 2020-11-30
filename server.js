@@ -4,11 +4,11 @@ const cors = require("cors");
 
 const app = express();
 
-var corsOptions = {
-  origin: "https://wildcircus2.netlify.app/",
-};
+// var corsOptions = {
+//   origin: "https://wildcircus2.netlify.app/",
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
