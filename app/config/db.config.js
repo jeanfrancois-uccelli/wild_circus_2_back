@@ -1,9 +1,10 @@
 module.exports = {
   HOST: "127.0.0.1",
-  USER: "root",
-  PASSWORD: "321Poleposition&",
-  DB: "wildcircus",
-  dialect: "mysql",
+  USER: "postgres",
+  PASSWORD: "my-secret-pw",
+  DB: "my-db",
+  dialect: "postgres",
+  PORT: 5432,
   pool: {
     max: 5,
     min: 0,
