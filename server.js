@@ -63,14 +63,14 @@ function initial() {
 
   Lieu.create({
     id: 1,
-    name: "admin",
+    name: "Marseille",
     lat: 45,
     long: 4
   });
 
   Lieu.create({
     id: 2,
-    name: "admin",
+    name: "Hamburg",
     lat: 55,
     long: 5
   });
