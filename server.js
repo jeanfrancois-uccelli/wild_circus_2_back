@@ -67,4 +67,11 @@ function initial() {
     lat: 45,
     long: 4
   });
+
+  Lieu.create({
+    id: 2,
+    name: "admin",
+    lat: 55,
+    long: 5
+  });
 }
