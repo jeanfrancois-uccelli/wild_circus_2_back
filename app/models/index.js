@@ -5,12 +5,20 @@ const sequelize = new Sequelize(
   config.DB,
   config.USER,
   config.PASSWORD,
-  {
+  
+  { ssl: {
+    rejectUnauthorized: false
+  },
     host: config.HOST,
+    sslmode:require,
     dialect: config.dialect,
-    operatorsAliases: false,
-    port: config.PORT,
-
+    protocol: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+      }
+    },
     pool: {
       max: config.pool.max,
       min: config.pool.min,
@@ -19,6 +27,7 @@ const sequelize = new Sequelize(
     }
   }
 );
+
 
 const db = {};
 
