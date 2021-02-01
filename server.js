@@ -74,4 +74,11 @@ function initial() {
     lat: 55,
     long: 5
   });
+
+  User.create({
+    id: 1,
+    username: "jeuf",
+    email: "jeuf@truc.com",
+    password: "123456"
+  });
 }
